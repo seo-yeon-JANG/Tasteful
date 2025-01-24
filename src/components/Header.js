@@ -1,4 +1,5 @@
-import "../styles/header.css";
+import { NavLink } from "react-router";
+import "../assets/styles/header.css";
 const Header = () => {
   return (
     <header
@@ -25,7 +26,14 @@ const Header = () => {
         <img src="salad_658252.png" alt="Logo" style={{ width: "70px" }} />
         <ul className="nav-menu">
           <li style={{ marginLeft: "30px", fontSize: "20px" }}>홈</li>
-          <li style={{ marginLeft: "30px", fontSize: "20px" }}>카테고리</li>
+          <li style={{ marginLeft: "30px", fontSize: "20px" }}>
+            <NavLink
+              to="/list"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              카테고리
+            </NavLink>
+          </li>
           <li style={{ marginLeft: "30px", fontSize: "20px" }}>즐겨찾기</li>
         </ul>
         <input
@@ -37,6 +45,7 @@ const Header = () => {
             border: "1px solid #EAEDEF",
             borderRadius: "5px",
             padding: "0 10px",
+            background: "#f8f9fa",
           }}
         />
         <ul

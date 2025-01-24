@@ -1,0 +1,9 @@
+@import url('../fonts.css');
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 200px;
+    font-family: 'Tenada';
+}
