@@ -25,7 +25,12 @@ const HeroSection = () => {
         }}
       >
         {CtagoryData.map((item) => (
-          <CtgBtn id={item.id} imgSrc={item.imgSrc} title={item.title} />
+          <CtgBtn
+            key={item.id}
+            id={item.id}
+            imgSrc={item.imgSrc}
+            title={item.title}
+          />
         ))}
       </ul>
     </div>

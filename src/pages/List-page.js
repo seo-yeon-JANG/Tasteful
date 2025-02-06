@@ -1,26 +1,40 @@
 import { useEffect, useState } from "react";
+import ItemBox from "../components/ItemBox";
+
 const ListPage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        "http://openapi.foodsafetykorea.go.kr/api/ede8b624297d44fd9558/COOKRCP01/json/1/10"
+        "https://tasteful-68c61-default-rtdb.firebaseio.com/recipes.json"
       );
       const json = await response.json();
-      setData(json.COOKRCP01.row);
-      console.log(json.COOKRCP01.row);
+      const events = [];
+      for (const key in json) {
+        events.push({
+          id: key,
+          ...json[key],
+        });
+      }
+      console.log(events);
+      setData(events);
     };
     fetchData();
-  }, [data]);
+  }, []);
+
+  if (data === undefined && data.length === 0) {
+    return <p>This is no data</p>;
+  }
+
   return (
     <>
-      <div>
-        <div>데이터 목록 페이지 입니다.</div>
+      <div
+        style={{
+          marginTop: "100px",
+        }}
+      >
         {data.map((item) => (
-          <div key={item.RCP_SEQ}>
-            {item.RCP_NM}
-            <img src={item.ATT_FILE_NO_MAIN} alt={item.RCP_NM} />
-          </div>
+          <ItemBox key={item.id} data={item} />
         ))}
       </div>
     </>

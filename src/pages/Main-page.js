@@ -1,11 +1,14 @@
 import BannerImg from "../components/Banner";
-import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 
 const MainPage = () => {
   return (
-    <div>
-      <Header />
+    <div
+      style={{
+        marginTop: "90px",
+        height: "700px",
+      }}
+    >
       <BannerImg />
       <HeroSection />
     </div>

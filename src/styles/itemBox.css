@@ -1,0 +1,42 @@
+.itemBlock {
+    display: flex;
+    max-width: 600px; /* 최대 너비 설정 */
+    width: 100%; /* 부모 컨테이너에 맞게 너비가 확장 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto; /* 중앙 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .foodImage {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  .foodDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .foodName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .foodContext {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .foodIngredients {
+    font-size: 1rem;
+    color: #777;
+  }
+  

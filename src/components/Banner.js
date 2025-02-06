@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../assets/styles/banner.css";
+import "../styles/banner.css";
 const bannerImg = [
   { title: "banner img 1", imgSrc: "banner1.jpg" },
   { title: "banner img 2", imgSrc: "banner2.jpg" },
